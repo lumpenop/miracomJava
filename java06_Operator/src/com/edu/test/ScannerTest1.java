@@ -18,7 +18,7 @@ public class ScannerTest1{
 		Scanner sc = new Scanner(System.in);
 		
 		//2. Scanner의 기능을 이용해서 값을 받아옴..
-		int i=sc.nextInt();
+		int i=sc.nextInt(); // 공백 기준
 		int j = sc.nextInt();
 		
 		System.out.println("숫자값 : "+i+","+j);

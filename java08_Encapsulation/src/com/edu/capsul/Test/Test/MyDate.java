@@ -1,14 +1,5 @@
 package com.edu.capsul;
 
-
-/*
- *  Encapsulation Pattern 3가지
- *  
- *  1. 객채의 필드에 private처리를 하여 외부에서 직접 접근할 수 없도록 합니다.
- *  2. private 처리 된 필드는 getter/setter로만 소통할 수 있습니다.
- *  3. setter를 통해 올바른 값만 입력될 수 있도록 제어문을 사용합니다. 
- */
-
 public class MyDate {
 	private int month;
 	private int day;
@@ -33,7 +24,7 @@ public class MyDate {
 	public int getDay() {
 		
 		if (day == 0) {
-			System.out.println("date를 확인해주세요");
+			System.out.println("date를 세팅해주세요");
 			System.exit(0);
 		}
 		return month;
