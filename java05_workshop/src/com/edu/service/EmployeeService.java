@@ -67,5 +67,43 @@ public class EmployeeService {
 		binEgidx[binEgidx.length] = egidx+1;
 	}
 	
+	public void updateManager(int idx, double salary, String dept, int deptno) {
+		managers[idx].setSalary(salary);
+		managers[idx].setDept(dept);
+		managers[idx].setDeptno(deptno);
+		
+	}
+	
+	public Manager findManager(String name) {
+		
+		Manager manager = null;
+		for(Manager m : managers) {
+			if(m.getName() == name) {
+				manager = m;
+			}
+		}
+		
+			
+		return manager;
+	}
+	
+	public Manager[] findManager(int deptno) {
+		Manager[] returnManagers= new Manager[managers.length];
+		
+		int index = 0;
+		for(Manager m : managers) {
+			if(m.getDeptno() == deptno) {
+				returnManagers[index++] = m;
+			}
+		}
+		
+		return returnManagers;
+	}
+	
+	public void printManager() {
+		for(Manager m : managers) {
+			System.out.println(m);
+		}
+	}
 	
 }

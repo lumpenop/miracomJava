@@ -40,6 +40,11 @@ public class EmployeeServiceTest {
 		
 		es.deleteManager(1);
 		es.addManager(m1);
+		
+//		es.printManager();
+		
+		System.out.println(es.findManager("sw"));
+		
 	}
 
 }
